@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Form-Validation.css" />
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <form autocomplete="off" id="form">
+        <h1>Join our community</h1>
+        <div class="input-wrapper">
+          <label for="Firstname">First name</label>
+          <input
+            required
+            minlength="2"
+            type="text"
+            class="firstname"
+            name="Firstname"
+            placeholder="Enter First name"
+          />
+          <span></span>
+        </div>
+        <div class="input-wrapper">
+          <label for="Lastname">Last name</label>
+          <input
+            required
+            type="text"
+            class="lastname"
+            name="Last name"
+            placeholder="Enter Last name"
+          />
+          <span></span>
+        </div>
+        <div class="input-wrapper">
+          <label for="Email">Email</label>
+          <input
+            required
+            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+            type="email"
+            class="email"
+            name="Email"
+            placeholder="Enter Email"
+          />
+          <span></span>
+        </div>
+        <div class="input-wrapper">
+          <label for="Password">Password</label>
+          <input
+            required
+            minlength="8"
+            type="password"
+            id="password"
+            name="Password"
+            placeholder="Enter Password"
+          />
+          <span> </span>
+        </div>
+        <div class="input-wrapper">
+          <label for="Verify Password">Verify Password</label>
+          <input
+            required
+            customverify="password"
+            type="password"
+            name="Verify Password"
+            placeholder="Verify Password"
+          />
+          <span></span>
+        </div>
+        <div class="input-wrapper">
+          <label for="Phone number">Phone number</label>
+          <input
+            required
+            minlength="10"
+            custommaxlength="15"
+            type="number"
+            class="contact"
+            name="Phone number"
+            placeholder="Enter Phone number"
+          />
+          <span></span>
+        </div>
+        <button type="submit" class="submit">Submit</button>
+      </form>
+    </div>
+    <script src="/Form-Validation.js"></script>
+  </body>
+</html>
